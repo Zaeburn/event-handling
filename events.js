@@ -9,6 +9,7 @@ function start () {
   one()
     
   // Your turn! Create a new function called `two`, then call it from here.
+  two()
 }
 
 function one () {
@@ -23,6 +24,16 @@ function one () {
 }
 
 // CREATE FUNCTION two HERE
+function two () {
+  // find the element Id
+  var two = document.getElementById('two')
+
+  // add an event listener, to turn it Green when the mouse enters the div
+  two.addEventListener('mouseenter', makeGreen)
+
+  // add an event listener, make it the colour white again when the mouse leaves
+  two.addEventListener('mouseleave', makeWhite)
+}
 
 // CREATE FUNCTION three HERE
 
@@ -35,4 +46,8 @@ function makeBlue (evt) {
 
 function makeWhite (evt) {
   evt.target.style.backgroundColor = 'white'
+}
+
+function makeGreen (evt) {
+  evt.target.style.backgroundColor = 'green'
 }
